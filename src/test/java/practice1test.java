@@ -42,4 +42,10 @@ class practice1test {
         assertEquals(3, count);
     }
 
+    @Test
+    public void TestCustomPredicateCount() {
+        long count = practice1.getCustomPredicateCount(Arrays.asList(1, 2, 3, 5, 6, 8, 9).stream(), integer -> (integer % 3) == 0);
+        assertEquals(3, count);
+    }
+
 }
