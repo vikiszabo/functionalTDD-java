@@ -19,9 +19,15 @@ class practice1test {
     }
 
     @Test
-    public void TestFirstEvenNumberStringNotFound() {
+    public void TestGetFirstEvenNumberStringNotFound() {
         String firstEven = practice1.getFirstEvenString(Arrays.asList(1, 3, 5).stream());
         assertEquals("NONE", firstEven);
+    }
+
+    @Test
+    public void TestGetFirstOddNumberStringNotFound() {
+        String firstOdd = practice1.getFirstOddString(Arrays.asList(2, 4, 6).stream());
+        assertEquals("NONE", firstOdd);
     }
 
 }
