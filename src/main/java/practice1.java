@@ -20,6 +20,19 @@ class practice1 {
         return normalizeResult(getFirst(stream, ODD_PREDICATE));
     }
 
+    public static long getOddCount(Stream<Integer> stream) {
+        return stream.filter(ODD_PREDICATE).count();
+    }
+
+    public static long getCustomPredicateCount(Stream<Integer> stream, Predicate<Integer> integerPredicate) {
+        return stream.filter(integerPredicate).count();
+    }
+
+
+    public static int sumOfDoubleValues(Stream<Integer> stream) {
+        return stream.map(integer -> integer*2).reduce((integer, integer2) -> integer + integer2).get();
+    }
+
     private static String normalizeResult(Optional<Integer> first) {
         return first.map(Objects::toString).orElse("NONE");
     }
@@ -31,16 +44,4 @@ class practice1 {
     private static Optional<Integer> getFirst(Stream<Integer> stream, Predicate<Integer> integerPredicate) {
         return stream.filter(integerPredicate).findFirst();
     }
-
-    public static long getOddCount(Stream<Integer> stream) {
-        return stream.filter(ODD_PREDICATE).count();
-    }
-
-    public static long getCustomPredicateCount(Stream<Integer> stream, Predicate<Integer> integerPredicate) {
-        return stream.filter(integerPredicate).count();
-    }
-
-
-
-
 }

@@ -48,4 +48,10 @@ class practice1test {
         assertEquals(3, count);
     }
 
+    @Test
+    public void TestSumOfDoubleValues() {
+        int sum = practice1.sumOfDoubleValues(Arrays.asList(1, 2, 3).stream());
+        assertEquals(12, sum);
+    }
+
 }
