@@ -18,4 +18,10 @@ class practice1test {
         assertEquals("4", firstEven);
     }
 
+    @Test
+    public void TestFirstEvenNumberStringNotFound() {
+        String firstEven = practice1.getFirstEvenString(Arrays.asList(1, 3, 5).stream());
+        assertEquals("NONE", firstEven);
+    }
+
 }

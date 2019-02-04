@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.stream.Stream;
 
 class practice1 {
@@ -7,6 +8,6 @@ class practice1 {
     }
 
     public static String getFirstEvenString(Stream<Integer> stream) {
-        return stream.filter(integer -> integer % 2 == 0).findFirst().get().toString();
+        return stream.filter(integer -> integer % 2 == 0).findFirst().map(Objects::toString).orElse("NONE");
     }
 }
