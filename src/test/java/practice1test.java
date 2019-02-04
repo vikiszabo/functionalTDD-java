@@ -30,4 +30,16 @@ class practice1test {
         assertEquals("NONE", firstOdd);
     }
 
+    @Test
+    public void TestGetOddCount1() {
+        long count = practice1.getOddCount(Arrays.asList(2, 4).stream());
+        assertEquals(0, count);
+    }
+
+    @Test
+    public void TestGetOddCount2() {
+        long count = practice1.getOddCount(Arrays.asList(1, 3, 4, 5, 6).stream());
+        assertEquals(3, count);
+    }
+
 }

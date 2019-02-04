@@ -31,4 +31,8 @@ class practice1 {
     private static Optional<Integer> getFirst(Stream<Integer> stream, Predicate<Integer> integerPredicate) {
         return stream.filter(integerPredicate).findFirst();
     }
+
+    public static long getOddCount(Stream<Integer> stream) {
+        return stream.filter(ODD_PREDICATE).count();
+    }
 }
