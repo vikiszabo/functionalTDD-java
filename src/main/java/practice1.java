@@ -30,7 +30,8 @@ class practice1 {
 
 
     public static int sumOfDoubleValues(Stream<Integer> stream) {
-        return stream.map(integer -> integer*2).reduce((integer, integer2) -> integer + integer2).get();
+        return stream.map(integer -> integer*2).mapToInt(Integer::intValue).sum();
+        //return stream.map(integer -> integer*2).reduce((integer, integer2) -> integer + integer2).get();
     }
 
     private static String normalizeResult(Optional<Integer> first) {
